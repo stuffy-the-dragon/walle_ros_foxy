@@ -11,7 +11,7 @@ class WallEMovementListener(Node):
         super().__init__('walle_movement_listener')
         self.subscription = self.create_subscription(
             Twist,
-            'topic',
+            'walle_move',
             self.listener_callback,
             10)
         self.subscription  # prevent unused variable warning
