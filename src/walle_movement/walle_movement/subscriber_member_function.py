@@ -2,6 +2,7 @@ import rclpy
 from rclpy.node import Node
 
 from geometry_msgs.msg import Twist
+from walle_movement.SurveyorSRV1MotorBoard import SurveyorSRV1MotorBoard
 
 
 class WallEMovementListener(Node):
@@ -14,6 +15,7 @@ class WallEMovementListener(Node):
             self.listener_callback,
             10)
         self.subscription  # prevent unused variable warning
+        self.driver = SurveyorSRV1MotorBoard()
 
     def listener_callback(self, msg):
         self.get_logger().info('I heard: "%s"' % msg)
