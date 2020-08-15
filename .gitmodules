@@ -1,3 +1,3 @@
 [submodule "drivers/srv1motordriver"]
-	path = drivers/srv1motordriver
+	path = src/walle_movement/walle_movement/drivers/srv1motordriver
 	url = https://github.com/stuffy-the-dragon/srv1motordriver.git
