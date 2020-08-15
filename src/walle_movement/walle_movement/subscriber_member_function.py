@@ -19,6 +19,17 @@ class WallEMovementListener(Node):
 
     def listener_callback(self, msg):
         self.get_logger().info('I heard: "%s"' % msg)
+        if msg['linear']['x'] > 0.0:
+            self.driver.motorsMove('forward')
+        elif msg['linear']['x'] < 0.0:
+            self.driver.motorsMove('backward')
+        elif msg['angular']['z'] > 0.0:
+            self.driver.motorsMove('left')
+        elif msg['angular']['z'] < 0.0:
+            self.driver.motorsMove('right')
+        else:
+            self.driver.motorsStop()
+
 
 
 def main(args=None):
