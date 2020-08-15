@@ -14,3 +14,6 @@ source /opt/ros/foxy/setup.bash
 
 # Install arg complete
 sudo apt install python3-argcomplete
+
+# Install colcon
+sudo apt install python3-colcon-common-extensions
